@@ -21,7 +21,13 @@
 			<nav class="header-menu">
 				<ul>
 				<% for (var i in theme.menu){ %>
-					<li><a href="<%- url_for(theme.menu[i]) %>"><%= i %></a></li>
+					<li><a href="<%- url_for(theme.menu[i]) %>">
+            <% if(__(__('menu.%s', i))){ %>
+              <%= __(__('menu.%s', i)) %>
+            <% }else{ %>
+              <%= i %>
+            <%}%>
+          </a></li>
 		        <%}%>
 		        <div class="clearfix"></div>
 				</ul>
@@ -33,6 +39,6 @@
 			        <%}%>
 				</div>
 			</nav>
-		</header>				
+		</header>
 	</div>
 </nav>

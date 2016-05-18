@@ -12,6 +12,7 @@ menu:
   about: About
   search: Search
   link : Links
+  program: Program
 
 sidebar:
   overview: Overview
@@ -24,6 +25,7 @@ post:
   untitled: Untitled
   toc_empty: This post does not have a Table Of Contents
   share: Share to
+  more: more
 
 page:
   totally: Totally

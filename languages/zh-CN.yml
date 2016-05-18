@@ -5,13 +5,14 @@ title:
 
 menu:
   menu: 菜单
-  home: 首页
-  archives: 归档
+  home: 主页
+  archives: 所有文章
   categories: 分类
   tags: 标签
   about: 关于我
   search: 搜索
   link: 友情链接
+  program: 编程相关
 
 sidebar:
   overview: 站点概览
@@ -24,6 +25,7 @@ post:
   untitled: 未命名
   toc_empty: 此文章未包含目录
   share: 分享到
+  more: 更多
 
 page:
   totally: 共有

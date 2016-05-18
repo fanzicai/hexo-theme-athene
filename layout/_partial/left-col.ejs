@@ -41,7 +41,7 @@
 						</div>
 						<%}%>
 					</div>
-					
+
 				</div>
 				<div class="tips-box hide">
 					<div class="tips-arrow"></div>
@@ -64,9 +64,15 @@
 				<section class="switch-part switch-part1">
 					<nav class="header-menu">
 						<ul>
-						<% for (var i in theme.menu){ %>
-							<li><a href="<%- url_for(theme.menu[i]) %>"><%= i %></a></li>
-				        <%}%>
+							<% for (var i in theme.menu){ %>
+								<li><a href="<%- url_for(theme.menu[i]) %>">
+									<% if(__(__('menu.%s', i))){ %>
+										<%= __(__('menu.%s', i)) %>
+									<% }else{ %>
+										<%= i %>
+									<%}%>
+								</a></li>
+					    <%}%>
 						</ul>
 					</nav>
 					<nav class="header-nav">
@@ -77,7 +83,7 @@
 						</div>
 					</nav>
 				</section>
-				
+
 				<%if(theme.tagcloud){%>
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
@@ -85,7 +91,7 @@
 					</div>
 				</section>
 				<%}%>
-				
+
 				<%if(theme.friends && theme.friends.length != 0){%>
 				<section class="switch-part switch-part3">
 					<div id="js-friends">
@@ -107,5 +113,5 @@
 				<%}%>
 			</div>
 		</div>
-	</header>				
+	</header>
 </div>
