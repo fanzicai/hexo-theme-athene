@@ -12,7 +12,11 @@ menu:
   about: 关于我
   search: 搜索
   link: 友情链接
-  program: 编程相关
+  program: 编程
+  Y2013: 2013年
+  Y2014: 2014年
+  Y2015: 2015年
+  Y2016: 2016年
 
 sidebar:
   overview: 站点概览
