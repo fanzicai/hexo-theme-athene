@@ -2,14 +2,14 @@ require([], function (){
 
 	var isMobileInit = false;
 	var loadMobile = function(){
-		require(['/js/mobile.js'], function(mobile){
+		require([atheneConfig.root_path + 'js/mobile.js'], function(mobile){
 			mobile.init();
 			isMobileInit = true;
 		});
 	}
 	var isPCInit = false;
 	var loadPC = function(){
-		require(['/js/pc.js'], function(pc){
+		require([atheneConfig.root_path + 'js/pc.js'], function(pc){
 			pc.init();
 			isPCInit = true;
 		});
@@ -54,8 +54,8 @@ require([], function (){
 	}
 
 	//是否使用fancybox
-	if(yiliaConfig.fancybox === true){
-		require(['/fancybox/jquery.fancybox.js'], function(pc){
+	if(atheneConfig.fancybox === true){
+		require([atheneConfig.root_path + 'fancybox/jquery.fancybox.js'], function(pc){
 			var isFancy = $(".isFancy");
 			if(isFancy.length != 0){
 				var imgArr = $(".article-inner img");
@@ -67,20 +67,20 @@ require([], function (){
 				$(".article-inner .fancy-ctn").fancybox();
 			}
 		});
-		
+
 	}
 	//是否开启动画
-	if(yiliaConfig.animate === true){
+	if(atheneConfig.animate === true){
 
-		require(['/js/jquery.lazyload.js'], function(){
+		require([atheneConfig.root_path + 'js/jquery.lazyload.js'], function(){
 			//avatar
 			$(".js-avatar").attr("src", $(".js-avatar").attr("lazy-src"));
 			$(".js-avatar")[0].onload = function(){
 				$(".js-avatar").addClass("show");
 			}
 		});
-		
-		if(yiliaConfig.isHome === true){
+
+		if(atheneConfig.isHome === true){
 			//content
 			function showArticle(){
 				$(".article").each(function(){
@@ -99,12 +99,12 @@ require([], function (){
 			});
 			showArticle();
 		}
-		
+
 	}
-	
+
 	//是否新窗口打开链接
-	if(yiliaConfig.open_in_new == true){
+	if(atheneConfig.open_in_new == true){
 		$(".article a[href]").attr("target", "_blank")
 	}
-	
+
 });
