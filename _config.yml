@@ -59,10 +59,10 @@ tagcloud: true
 
 #是否开启友情链接
 #不开启——
-# friends: false
+ friends: false
 #开启——
-friends:
-  name: http://nid.sdtt.com.cn
+#friends:
+#  name: http://nid.sdtt.com.cn
 
 #是否开启“关于我”。
 #不开启——
