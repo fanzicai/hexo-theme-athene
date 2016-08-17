@@ -20,7 +20,7 @@ subnav:
   gravatar: http://cn.gravatar.com/fanzicai
   ghost: http://fanzicai.ghost.io/
   #weibo: "#"
-  #rss: "#"
+  rss: atom.xml
   #zhihu: "#"
   #douban: "#"
   mail: mailto:fanzicai@yahoo.com
@@ -30,11 +30,13 @@ subnav:
   #linkedin: "#"
 
 rss: atom.xml
+sitemap: sitemap.xml
 
 # Content
 excerpt_link: more
 fancybox: true
 mathjax: true
+search: true
 
 # 是否开启动画效果
 animate: true
